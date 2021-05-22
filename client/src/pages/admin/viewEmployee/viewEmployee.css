@@ -1,0 +1,54 @@
+.viewEmployee {
+  display: flex;
+  flex-direction: column;
+}
+
+.viewWrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 50px);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgb(81, 206, 228), white);
+}
+
+.viewBody {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 600px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(241, 138, 173);
+  border-radius: 8px;
+}
+
+.viewContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  /* align-items: center; */
+  background-color: white;
+  border-radius: 8px;
+  height: 500px;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.viewContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.viewLabel {
+  flex: 40%;
+  font-size: 20px;
+}
+
+.viewName {
+  flex: 60%;
+  font-size: 20px;
+  margin-left: 10px;
+}

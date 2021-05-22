@@ -1,0 +1,54 @@
+.topbarE {
+  height: 50px;
+  width: 100%;
+  position: sticky;
+  z-index: 999;
+  background-color: #1877f2;
+}
+
+.topbarWrapperE {
+  display: flex;
+  flex-direction: row;
+}
+
+.topbarLeftE {
+  display: flex;
+  flex: 70%;
+}
+
+.topbarRightE {
+  display: flex;
+  flex-direction: row;
+  flex: 30%;
+}
+
+.topbarLogoE {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 80px;
+  color: white;
+  align-self: center;
+}
+
+.topbarElementsE {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbarIconE {
+  font-size: 25px !important;
+  color: white;
+  margin-left: 7px;
+  margin-right: 3px;
+  justify-self: center;
+}
+
+.topbarTextE {
+  font-size: 18px;
+  color: white;
+  margin-right: 11px;
+  justify-self: center;
+}

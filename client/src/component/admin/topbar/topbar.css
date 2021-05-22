@@ -1,0 +1,67 @@
+.topbar {
+  height: 50px;
+  width: 100%;
+  position: sticky;
+  z-index: 999;
+  background-color: #1877f2;
+}
+
+.topbarWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.topbarLeft {
+  display: flex;
+  flex: 55%;
+}
+
+.topbarRight {
+  display: flex;
+  flex-direction: row;
+  flex: 45%;
+}
+
+.topbarLogo {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 80px;
+  color: white;
+  align-self: center;
+}
+
+.topbarElements {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbarIcon {
+  font-size: 25px !important;
+  color: white;
+  margin-left: 7px;
+  margin-right: 3px;
+  justify-self: center;
+}
+
+.topbarText {
+  font-size: 18px;
+  color: white;
+  margin-right: 7px;
+  justify-self: center;
+  cursor: pointer;
+}
+
+.searchEmployee {
+  border-radius: 3px;
+  border: none;
+  height: 22px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.searchEmployee:focus {
+  outline: none;
+}

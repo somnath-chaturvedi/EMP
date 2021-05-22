@@ -1,0 +1,91 @@
+.aEmp {
+  display: flex;
+  flex-direction: column;
+}
+.aEmpWrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-image: linear-gradient(rgb(81, 206, 228), white);
+  justify-content: center;
+  align-items: center;
+  /* background-color: white; */
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.inputLeft {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputRight {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputBox {
+  margin-top: 10px;
+  padding: 30px;
+  height: auto;
+  width: 70%;
+  background-color: rgb(241, 138, 173);
+  border-radius: 9px;
+  -webkit-box-shadow: 5px 5px 15px 5px #7e7e7e;
+  box-shadow: 5px 5px 15px 5px #7e7e7e;
+}
+
+.inputDesc {
+  /* margin-top: px; */
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.inputLine {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputField {
+  height: 30px;
+  width: 300px;
+  font-size: 20px;
+}
+
+.inputField:focus {
+  outline: none;
+}
+
+.inputText {
+  font-size: 24px;
+  margin-left: 20px;
+}
+
+.addEmployeeButton {
+  margin-top: 20px;
+  font-weight: 600;
+  height: 40px;
+  width: 120px;
+  border-radius: 5px;
+  color: rgb(241, 138, 173);
+  background-color: white;
+  font-weight: 800;
+  outline: none;
+  border: none;
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+}
