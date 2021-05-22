@@ -93,20 +93,14 @@ router.put('/update/:id', async(req,res) => {
 
 //delete employee
 router.delete('/remove/:id', async(req,res) => {
-    const admin = await Admin.findById(req.params.id)
-    const { isAdmin, ...other } = admin._doc;
-    if(isAdmin) {
         try {
-            await Employee.findByIdAndDelete(req.body.id)
+            await Employee.findByIdAndDelete(req.params.id)
             res.status(200).json('Deleted')
         } catch (error) {
             return res.status(500).json(error)
         }
     }
-    else{
-        res.status(404).json('You cannot delete')
-    }
-})
+)
 
 //get a user
 router.get("/update/:id", async (req, res) => {

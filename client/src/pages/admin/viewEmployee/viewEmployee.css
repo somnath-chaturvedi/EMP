@@ -16,7 +16,7 @@
 .viewBody {
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: 650px;
   width: 600px;
   align-items: center;
   justify-content: center;
@@ -25,13 +25,14 @@
 }
 
 .viewContainer {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
   padding: 15px;
   /* align-items: center; */
   background-color: white;
   border-radius: 8px;
-  height: 500px;
+  height: 550px;
   width: 500px;
   justify-content: space-between;
 }
@@ -51,4 +52,18 @@
   flex: 60%;
   font-size: 20px;
   margin-left: 10px;
+}
+
+.searchBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchEmpButton {
+  margin-left: 25px;
+  height: 25px;
+  width: 70px;
+  font-weight: 500;
+  background-color: white;
+  border-color: rgb(180, 180, 180);
 }

@@ -74,15 +74,12 @@
 
 .addEmployeeButton {
   margin-top: 20px;
-  font-weight: 600;
+  font-weight: 500;
   height: 40px;
   width: 120px;
   border-radius: 5px;
-  color: rgb(241, 138, 173);
   background-color: white;
-  font-weight: 800;
-  outline: none;
-  border: none;
+  border-color: rgb(190, 190, 190);
 }
 
 .submitButton {

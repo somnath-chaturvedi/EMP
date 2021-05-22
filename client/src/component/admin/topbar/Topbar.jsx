@@ -1,35 +1,10 @@
 import './topbar.css'
-import {Add, Info, Remove, ExitToApp, Update, Search} from '@material-ui/icons'
-import { Link, Redirect } from 'react-router-dom'
-import { useRef, useState, React, useEffect} from 'react'
-import axios from "axios"
-import ViewEmployee from '../../../pages/admin/viewEmployee/ViewEmployee'
-import Home from '../../../pages/admin/home/Home'
+import {Add, Info, Remove, ExitToApp, Update} from '@material-ui/icons'
+import { Link } from 'react-router-dom'
+import {React} from 'react'
 
 
 export default function Topbar() {
-
-
-    const [update, setUpdate] = useState(false);
-    const [isEmployee, setIsEmployee] = useState(false);
-    const employeeId = useRef();
-    const handleClick = () => {
-        setUpdate(true);
-    }
-
-    const[employee, setEmployee] = useState({})
-
-    const handleSearch = () =>{
-        setIsEmployee(true)
-    }
-    
-    useEffect(() => {
-        const fetchEmployee = async() => {
-        const res = await axios.get('/update/' + employeeId)
-        setEmployee(res.data)
-        }
-        fetchEmployee();
-    })
 
     return (
         <div className="topbar">
@@ -53,8 +28,10 @@ export default function Topbar() {
                         </Link>
                     </div>
                     <div className="topbarElements">
-                        {update ? <Search className="topbarIcon" onClick = {handleSearch}/>: <Update className="topbarIcon"/>}
-                        <span className="topbarText" onClick = {handleClick}>{update ? <input type='text' placeholder = 'Employee ID' className = 'searchEmployee' ref={employeeId}/>: "Update Employee Info"}</span>
+                        <Update className="topbarIcon"/>
+                        <Link to="/update" style={{ textDecoration: "none" }}>
+                            <span className="topbarText">Update Employee Info</span>
+                        </Link>
                     </div>
                     <div className="topbarElements">
                         <Info className="topbarIcon"/>

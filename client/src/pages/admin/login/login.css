@@ -86,6 +86,10 @@
   color: white;
 }
 
+.progressBar {
+  font-size: 15px !important;
+}
+
 .forgetPassword {
   align-self: center;
   font-size: 15px;

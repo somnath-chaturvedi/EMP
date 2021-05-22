@@ -40,6 +40,19 @@ export default function AddEmployee() {
         } catch (error) {
             console.log(error)
         }
+        firstName.current.value = ""
+        lastName.current.value = ""
+        email.current.value = ""
+        dateOfBirth.current.value = ""
+        phone.current.value = ""
+        address.current.value = ""
+        aadharCard.current.value = ""
+        department.current.value = ""
+        designation.current.value = ""
+        ctc.current.value = ""
+        joiningBonus.current.value = ""
+        relocationBonus.current.value = ""
+        stocks.current.value = ""
     }
 
 
