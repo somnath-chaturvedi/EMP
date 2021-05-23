@@ -90,7 +90,7 @@ export default function ViewEmployee() {
                 <div className="viewContent">
                     <span className="viewLabel">First Name:</span>
                     {isEdit ? 
-                    <input type="text" className="viewName1" ref ={firstName}/> : 
+                    <input type="text" className="viewName1" ref ={firstName} placeholder = {employee.firstName}/> : 
                     <><span className="viewName1">{employee.firstName}</span>
                     <Edit className = "editButton" onClick = {handleEdit}/></>
                     }
@@ -98,21 +98,21 @@ export default function ViewEmployee() {
                 <div className="viewContent">
                     <span className="viewLabel">Last Name:</span>
                     {isEdit ? 
-                    <input type="text" className="viewName1" ref = {lastName}/> : 
+                    <input type="text" className="viewName1" ref = {lastName} placeholder = {employee.lastName}/> : 
                     <span className="viewName">{employee.lastName}</span>
                     }
                 </div>
                 <div className="viewContent">
                     <span className="viewLabel">Email:</span>
                     {isEdit ? 
-                    <input type="text" className="viewName1" ref={email}/> : 
+                    <input type="text" className="viewName1" ref={email} placeholder = {employee.email}/> : 
                     <span className="viewName">{employee.email}</span>
                     }
                 </div>
                 <div className="viewContent">
                     <span className="viewLabel">Phone:</span>
                     {isEdit ? 
-                    <input type="text" className="viewName1" ref={phone}/> : 
+                    <input type="text" className="viewName1" ref={phone} placeholder = {employee.phone}/> : 
                     <span className="viewName">{employee.phone}</span>
                     }
                 </div>
@@ -127,7 +127,7 @@ export default function ViewEmployee() {
                 <div className="viewContent">
                     <span className="viewLabel">Address:</span>
                     {isEdit ? 
-                    <input type="text" className="viewName1" ref ={address}/> : 
+                    <input type="text" className="viewName1" ref ={address} placeholder = {employee.address}/> : 
                     <span className="viewName">{employee.address}</span>
                     }
                 </div>
@@ -138,7 +138,7 @@ export default function ViewEmployee() {
                 <div className="viewContent">
                     <span className="viewLabel">CTC:</span>
                     {isEdit ? 
-                    <input type="text" className="viewName1" ref={ctc}/> : 
+                    <input type="text" className="viewName1" ref={ctc} placeholder = {employee.ctc}/> : 
                     <span className="viewName">{employee.ctc}</span>
                     }
                 </div>
@@ -157,14 +157,14 @@ export default function ViewEmployee() {
                 <div className="viewContent">
                     <span className="viewLabel">Designation:</span>
                     {isEdit ? 
-                    <input type="text" className="viewName1" ref={designation}/> : 
+                    <input type="text" className="viewName1" ref={designation} placeholder = {employee.designation}/> : 
                     <span className="viewName">{employee.designation}</span>
                     }
                 </div>
                 <div className="viewContent">
                     <span className="viewLabel">Department:</span>
                     {isEdit ? 
-                    <input type="text" className="viewName1" ref={department}/> : 
+                    <input type="text" className="viewName1" ref={department} placeholder = {employee.department}/> : 
                     <span className="viewName">{employee.department}</span>
                     }
                 </div>
