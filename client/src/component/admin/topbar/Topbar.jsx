@@ -29,7 +29,7 @@ export default function Topbar() {
                     </div>
                     <div className="topbarElements">
                         <Update className="topbarIcon"/>
-                        <Link to="/update" style={{ textDecoration: "none" }}>
+                        <Link to="/view" style={{ textDecoration: "none" }}>
                             <span className="topbarText">Update Employee Info</span>
                         </Link>
                     </div>

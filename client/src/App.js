@@ -34,7 +34,7 @@ function App() {
         <Route path = "/removeEmployee">
           {employee ? <RemoveEmployee/> : <Redirect to='/login'/>}
         </Route>
-        <Route path = "/update">
+        <Route path = "/view">
           {employee ? <ViewEmployee/> : <Redirect to='/login'/>}
         </Route>
         <Route path = "/employee/login">

@@ -44,14 +44,20 @@
 }
 
 .viewLabel {
-  flex: 40%;
+  flex: 30%;
   font-size: 20px;
 }
 
 .viewName {
-  flex: 60%;
+  flex: 65%;
   font-size: 20px;
   margin-left: 10px;
+}
+
+.viewName1 {
+  flex: 65%;
+  font-size: 20px;
+  margin-left: 24px;
 }
 
 .searchBox {

@@ -66,17 +66,6 @@ router.post('/addEmployee', async (req,res) => {
 
 //update info 
 router.put('/update/:id', async(req,res) => {
-    const admin = await Admin.findById(req.params.id)
-    const { isAdmin, ...other } = admin._doc;
-    if(req.body.employeeId === req.params.id || req.body.isAdmin) {
-        if(req.body.password){
-            try {
-                const salt = await bcrypt.genSalt(10)
-                req.body.password = await bcrypt.hash(req.body.password,salt)
-            } catch (error) {
-                return res.status(500).json(error)
-            }
-        }
         try {
             const employee = await Employee.findByIdAndUpdate(req.params.id, {
                 $set: req.body,
@@ -85,10 +74,6 @@ router.put('/update/:id', async(req,res) => {
         } catch (error) {
             return res.status(500).json(error)
         }
-    }
-    else{
-        res.status(404).json('You cannot update')
-    }
 })
 
 //delete employee
@@ -103,7 +88,7 @@ router.delete('/remove/:id', async(req,res) => {
 )
 
 //get a user
-router.get("/update/:id", async (req, res) => {
+router.get("/view/:id", async (req, res) => {
     try {
         // const admin = await Admin.findById(req.params.id)
         // const { isAdmin, ...other } = admin._doc;
