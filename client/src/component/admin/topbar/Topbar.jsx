@@ -6,6 +6,10 @@ import {React} from 'react'
 
 export default function Topbar() {
 
+    const handleLogOut = () => {
+        window.location.reload();
+    }
+
     return (
         <div className="topbar">
             <div className="topbarWrapper">
@@ -35,15 +39,13 @@ export default function Topbar() {
                     </div>
                     <div className="topbarElements">
                         <Info className="topbarIcon"/>
-                        <Link to="/" style={{ textDecoration: "none" }}>
+                        <Link to="/about" style={{ textDecoration: "none" }}>
                         <span className="topbarText">About</span>
                         </Link>
                     </div>
                     <div className="topbarElements">
                         <ExitToApp className="topbarIcon"/>
-                        <Link to="/" style={{ textDecoration: "none" }}>
-                        <span className="topbarText">Logout</span>
-                        </Link>
+                        <span className="topbarText" onClick = {handleLogOut}>Logout</span>
                     </div>
                 </div>
             </div>

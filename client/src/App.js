@@ -2,10 +2,8 @@ import Login from './pages/admin/login/Login'
 import Home from './pages/admin/home/Home'
 import AddEmployee from './pages/admin/addEmployee/AddEmployee'
 import RemoveEmployee from './pages/admin/removeEmployee/RemoveEmployee'
-import EmployeeLogin from './pages/employee/login/EmployeeLogin'
-import EmployeeHome from './pages/employee/home/EmployeeHome'
-import Leave from './pages/employee/leave/Leave'
 import ViewEmployee from './pages/admin/viewEmployee/ViewEmployee'
+import About from './pages/about/About'
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,6 +12,7 @@ import {
 } from "react-router-dom";
 import { useContext } from 'react'
 import { AuthContext } from './context/AuthContext'
+
 
 function App() {
   const {employee} = useContext(AuthContext)
@@ -37,14 +36,8 @@ function App() {
         <Route path = "/view">
           {employee ? <ViewEmployee/> : <Redirect to='/login'/>}
         </Route>
-        <Route path = "/employee/login">
-          <EmployeeLogin/>
-        </Route>
-        <Route exact path = "/employee">
-          <EmployeeHome/>
-        </Route>
-        <Route path = "/employee/leave">
-          <Leave/>
+        <Route path = "/about">
+          {employee ? <About/> : <Redirect to='/login'/>}
         </Route>
       </Switch>
     </Router>

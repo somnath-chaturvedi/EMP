@@ -1,0 +1,49 @@
+.about {
+  display: flex;
+  flex-direction: column;
+}
+.aboutWrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+  background-image: linear-gradient(rgb(81, 206, 228), white);
+  align-items: center;
+  flex-direction: column;
+}
+
+.aboutHeading {
+  color: black;
+  margin-top: 100px;
+}
+
+.aboutDEsc {
+  margin-top: 20px;
+}
+
+.aboutBody {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 100px; */
+  width: 1200px;
+  height: 250px;
+  justify-content: space-between;
+}
+
+.aboutR1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.aboutName {
+  font-size: larger;
+  font-weight: 600;
+}
+
+.aboutTile {
+  padding: 40px;
+  width: 200px;
+  height: 60px;
+  background-color: white;
+  border-radius: 8px;
+}
