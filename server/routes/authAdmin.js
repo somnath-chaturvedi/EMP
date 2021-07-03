@@ -119,6 +119,7 @@ router.put("/leave/:id", async (req, res) => {
   try {
     const employee = await Employee.findById(req.params.id);
     await employee.updateOne({ $push: { leave : req.body } });
+    await employee.updateOne({ $set: leaveCount+1 });
     res.status(200).json("Leave application accepted");
   } catch (err) {
     res.status(500).json(err);

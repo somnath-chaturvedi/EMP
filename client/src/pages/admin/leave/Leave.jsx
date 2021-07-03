@@ -1,11 +1,13 @@
 import './leave.css'
 import Topbar from '../../../component/admin/topbar/Topbar'
-import Moment from 'react-moment';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState} from 'react';
 import axios from 'axios';
-import { Edit } from '@material-ui/icons';
+import { Redirect } from 'react-router-dom';
 
-export default function Leave(employee) {
+export default function Leave() {
+
+    const[isSubmit,setIsSubmit] = useState(false);
+
     const employeeId = useRef();
     const from = useRef();
     const to = useRef();
@@ -27,6 +29,7 @@ export default function Leave(employee) {
         from.current.value = "";
         to.current.value = "";
         desc.current.value = "";
+        setIsSubmit(true);
     }
 
     return(
@@ -49,6 +52,7 @@ export default function Leave(employee) {
                                 </div>
                             <div className="buttonDiv">
                                 <button className="submit" type = 'submit'>Submit</button>
+                                { isSubmit ? <Redirect to = '/'/> : <> </> }
                             </div>
                         </div>
                 </form>

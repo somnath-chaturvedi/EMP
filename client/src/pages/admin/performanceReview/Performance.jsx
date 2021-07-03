@@ -11,7 +11,6 @@ export default function Performance() {
     const [update, setUpdate] = useState(false);
     const [isEdit, setIsEdit] = useState(false);
     const [chartData, setChartData] = useState({});
-    const [rating, setRating] = useState([]);
 
     const communication = useRef();
     const problemSolving = useRef();
@@ -198,7 +197,7 @@ export default function Performance() {
                     <span className="perviewName">{employee.deadline}</span>
                     }
                 </div>
-                {isEdit ? <button type = 'submit'>Edit</button>: <div className="blank"></div>}
+                {isEdit ? <button type = 'submit'>Submit</button>: <div className="blank"></div>}
                 </div>
                 </form>
                  :

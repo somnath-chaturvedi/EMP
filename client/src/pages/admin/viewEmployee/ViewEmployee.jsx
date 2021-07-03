@@ -172,7 +172,7 @@ export default function ViewEmployee() {
                 </div>
                 <div className="viewContent">
                     <span className="viewLabel">Basic Salary:</span>
-                    <span className="viewName"> &#8377; {((employee.leaveCount) > 24) ? basicSalary.toFixed(2) - 1000 : basicSalary.toFixed(2)}</span>
+                    <span className="viewName"> &#8377; {((employee.leave === undefined ? 0 : employee.leave.length) > 24) ? basicSalary.toFixed(2) - 1000 : basicSalary.toFixed(2)}</span>
                 </div>
                 <div className="viewContent">
                     <span className="viewLabel">HRA:</span>
@@ -184,7 +184,7 @@ export default function ViewEmployee() {
                 </div>
                 <div className="viewContent">
                     <div className="viewLabel"><Link to = '/leaves'style={{ textDecoration: "none" }}><span>Leaves:</span></Link></div>
-                    <span className="viewName">{employee.leaveCount}</span>
+                    <span className="viewName">{employee.leave === undefined ? 0 : employee.leave.length}</span>
                 </div>
                 {isEdit ? <button type = 'submit'>Edit</button>: <div className="blank"></div>}
                 </form>
