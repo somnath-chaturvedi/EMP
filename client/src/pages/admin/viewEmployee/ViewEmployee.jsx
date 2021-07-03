@@ -4,11 +4,13 @@ import Moment from 'react-moment';
 import { useEffect, useRef, useState } from 'react';
 import axios from 'axios';
 import { Edit } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 export default function ViewEmployee() {
 
     const [update, setUpdate] = useState(false);
     const [isEdit, setIsEdit] = useState(false);
+    
 
     const firstName = useRef();
     const lastName = useRef();
@@ -170,15 +172,19 @@ export default function ViewEmployee() {
                 </div>
                 <div className="viewContent">
                     <span className="viewLabel">Basic Salary:</span>
-                    <span className="viewName">{basicSalary}</span>
+                    <span className="viewName"> &#8377; {((employee.leaveCount) > 24) ? basicSalary.toFixed(2) - 1000 : basicSalary.toFixed(2)}</span>
                 </div>
                 <div className="viewContent">
                     <span className="viewLabel">HRA:</span>
-                    <span className="viewName">{basicSalary/2}</span>
+                    <span className="viewName"> &#8377; {(basicSalary/2).toFixed(2)}</span>
                 </div>
                 <div className="viewContent">
                     <span className="viewLabel">PF:</span>
-                    <span className="viewName">{pf}</span>
+                    <span className="viewName"> &#8377; {(pf).toFixed(2)}</span>
+                </div>
+                <div className="viewContent">
+                    <div className="viewLabel"><Link to = '/leaves'style={{ textDecoration: "none" }}><span>Leaves:</span></Link></div>
+                    <span className="viewName">{employee.leaveCount}</span>
                 </div>
                 {isEdit ? <button type = 'submit'>Edit</button>: <div className="blank"></div>}
                 </form>

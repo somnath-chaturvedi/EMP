@@ -36,6 +36,28 @@ const EmployeeSchema = new mongoose.Schema({
         type: Number,
         require: true
     },
+    communication: {
+        type: Number,
+    },
+    collaboration: {
+        type: Number,
+    },
+    problemSolving: {
+        type: Number,
+    },
+    quality: {
+        type: Number,
+    },
+    attention: {
+        type: Number,
+    },
+    deadline: {
+        type: Number,
+    },
+    overAll:{
+        type: Array,
+        default: []
+    },
     department: {
         type: String,
         require: true
@@ -63,8 +85,13 @@ const EmployeeSchema = new mongoose.Schema({
     },
 
     leave: {
+        type: Array,
+        default: []
+    },
+
+    leaveCount: {
         type: Number,
-        default: 0
+        default: 0,
     }
 
 },

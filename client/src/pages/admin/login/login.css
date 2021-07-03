@@ -50,6 +50,16 @@
   position: absolute;
 }
 
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 7px;
+  height: 420px;
+  width: 300px;
+  justify-content: space-between;
+}
+
 .loginContainer {
   padding: 20px;
   margin-left: 300px;
@@ -57,6 +67,7 @@
   flex-direction: column;
   background-color: white;
   border-radius: 7px;
+  align-items: center;
   height: 420px;
   width: 300px;
   justify-content: space-between;

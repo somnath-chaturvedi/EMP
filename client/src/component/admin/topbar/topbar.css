@@ -13,13 +13,13 @@
 
 .topbarLeft {
   display: flex;
-  flex: 55%;
+  flex: 45%;
 }
 
 .topbarRight {
   display: flex;
   flex-direction: row;
-  flex: 45%;
+  flex: 55%;
 }
 
 .topbarLogo {

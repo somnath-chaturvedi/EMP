@@ -1,5 +1,5 @@
 import './topbar.css'
-import {Add, Info, Remove, ExitToApp, Update} from '@material-ui/icons'
+import {Add, Info, Remove, ExitToApp, Update, Speed} from '@material-ui/icons'
 import { Link } from 'react-router-dom'
 import {React} from 'react'
 
@@ -35,6 +35,12 @@ export default function Topbar() {
                         <Update className="topbarIcon"/>
                         <Link to="/view" style={{ textDecoration: "none" }}>
                             <span className="topbarText">Update Employee Info</span>
+                        </Link>
+                    </div>
+                    <div className="topbarElements">
+                        <Speed className="topbarIcon"/>
+                        <Link to="/performance" style={{ textDecoration: "none" }}>
+                            <span className="topbarText">Review Performance</span>
                         </Link>
                     </div>
                     <div className="topbarElements">

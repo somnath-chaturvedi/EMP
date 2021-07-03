@@ -1,0 +1,122 @@
+.perviewEmployee {
+  display: flex;
+  flex-direction: column;
+}
+
+.perviewWrapper {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 50px);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgb(81, 206, 228), white);
+}
+
+.bodyOutSide {
+  flex: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  width: 600px;
+  align-items: center;
+}
+
+.perviewBody {
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  width: 570px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(241, 138, 173);
+  border-radius: 8px;
+}
+
+.perviewContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  height: 550px;
+  width: 500px;
+  align-items: center;
+}
+
+.performBody {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.speedometer {
+  display: flex;
+  align-items: center;
+}
+
+.perviewContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.perviewLabel {
+  flex: 65%;
+  font-size: 19px;
+  margin-left: 20px;
+}
+
+.perviewName {
+  flex: 7%;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.perviewName1 {
+  position: relative;
+  flex: 6%;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.persearchBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.persearchEmpButton {
+  margin-left: 25px;
+  height: 25px;
+  width: 70px;
+  font-weight: 500;
+  background-color: white;
+  border-color: rgb(180, 180, 180);
+}
+
+.overAll {
+  /* margin-top: -120px; */
+  margin-bottom: 30px;
+  font-size: 17px;
+  align-self: center;
+}
+
+.pereditButton {
+  position: absolute;
+  margin-left: 26%;
+  margin-top: -2px;
+}
+
+.graph {
+  flex: 50%;
+  align-self: center;
+  justify-self: center;
+  height: 460px;
+  width: 260px;
+  margin-top: -100px;
+  margin-left: 20px;
+  background-color: aliceblue;
+}

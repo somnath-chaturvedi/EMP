@@ -90,15 +90,12 @@ router.delete('/remove/:id', async(req,res) => {
 //get a user
 router.get("/view/:id", async (req, res) => {
     try {
-        // const admin = await Admin.findById(req.params.id)
-        // const { isAdmin, ...other } = admin._doc;
-        
-            try {
-                const employee = await Employee.findById(req.params.id);
-                const { password, updatedAt, ...other } = employee._doc;
-                res.status(200).json(other);
-            } catch (err) {
-                res.status(500).json(err);
+        try {
+            const employee = await Employee.findById(req.params.id);
+            const { password, updatedAt, ...other } = employee._doc;
+            res.status(200).json(other);
+        } catch (err) {
+            res.status(500).json(err);
             }
     } catch (error) {
         res.status(404).json('You cannot get employee')
@@ -106,6 +103,26 @@ router.get("/view/:id", async (req, res) => {
     
 });
 
+//performance
+router.put("/performance/:id", async (req, res) => {
+  try {
+    const employee = await Employee.findById(req.params.id);
+    await employee.updateOne({ $push: { overAll : req.body } });
+    res.status(200).json("Performance added");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
+//leave application
+router.put("/leave/:id", async (req, res) => {
+  try {
+    const employee = await Employee.findById(req.params.id);
+    await employee.updateOne({ $push: { leave : req.body } });
+    res.status(200).json("Leave application accepted");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router

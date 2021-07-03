@@ -1,10 +1,10 @@
-export const LoginStart = (employeeCredentials) => ({
+export const LoginStart = (adminCredentials) => ({
     type: "LOGIN_START",
 })
 
-export const LoginSuccess = (employee) => ({
+export const LoginSuccess = (admin) => ({
     type: "LOGIN_SUCCESS",
-    payload: employee,
+    payload: admin,
 })
 
 export const LoginFaliure = () => ({

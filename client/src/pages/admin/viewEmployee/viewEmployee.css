@@ -46,6 +46,7 @@
 .viewLabel {
   flex: 30%;
   font-size: 20px;
+  color: black;
 }
 
 .viewName {

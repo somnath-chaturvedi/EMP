@@ -1,0 +1,77 @@
+.leave {
+  display: flex;
+  height: calc(100vh - 50px);
+  flex-direction: column;
+  background-image: linear-gradient(rgb(81, 206, 228), white);
+  justify-content: center;
+  align-items: center;
+}
+
+.leaveWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 450px;
+  width: 450px;
+  background-color: rgb(241, 138, 173);
+  border-radius: 7px;
+}
+
+.leaveHead {
+  display: flex;
+  flex-direction: row;
+  /* align-self: center; */
+}
+
+.leaveBody {
+  padding-top: 1%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.leaveFrom {
+  margin-right: 8px;
+  height: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: none;
+  padding: 2px;
+  margin-left: 2px;
+}
+
+.leaveFrom:focus {
+  outline: none;
+}
+
+.descField {
+  height: 350px;
+  margin-bottom: 13px;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.leaveDesc {
+  margin-top: 5px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+}
+
+.leaveDesc:focus {
+  border: none;
+}
+
+.buttonDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.submit {
+  align-self: center;
+  height: 30px;
+  width: 100px;
+  border-radius: 3px;
+  border: none;
+}
