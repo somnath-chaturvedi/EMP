@@ -75,7 +75,7 @@ export default function ViewEmployee() {
         
 
     const basicSalary = (employee.ctc - employee.joiningBonus - employee.relocationBonus - employee.stocks)/12;
-    const pf = basicSalary*(0.12)
+    const pf = basicSalary*(0.24)
 
     return (
         <div className="viewEmployee">
